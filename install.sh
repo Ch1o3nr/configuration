@@ -6,8 +6,9 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 cp ~/.zshrc ~/.zshrc.bak || echo "$LINENO: failed";
 sed -i "s/plugins=(git)/plugins=(git zsh-autosuggestions zsh-syntax-highlighting sudo)/g" ~/.zshrc || echo "$LINENO: failed";
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k || echo "$LINENO: failed";
-sed -i "s/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k/powerlevel10k"/g" ~/.zshrc || echo "$LINENO: failed";
+sed -i "s/robbyrussell/powerlevel10k\/powerlevel10k/g" ~/.zshrc || echo "$LINENO: failed";
 sudo yum install emacs -y || echo "$LINENO: failed";
+mkdir ~/.emacs.d || echo "$LINENO: failed";
 curl ch1o3nr.com/asdf.bak > ~/.emacs.d/init.el || echo "$LINENO: failed";
 sudo cp -r ~/.emacs.d /root || echo "$LINENO: failed";
 echo -e '\n#alias\nalias em="emacs"\n#alias END' >> ~/.zshrc || echo "$LINENO: failed";
