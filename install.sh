@@ -1,4 +1,4 @@
-g#!/bin/bash
+#!/bin/bash
 sudo yum install git -y || echo "$LINENO: failed";
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" || echo "$LINENO: failed";
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions || echo "$LINENO: failed";
