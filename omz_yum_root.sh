@@ -9,5 +9,5 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 sed -i "s/robbyrussell/powerlevel10k\/powerlevel10k/g" ~/.zshrc || echo "$LINENO: failed";
 yum install emacs -y || echo "$LINENO: failed";
 mkdir ~/.emacs.d || echo "$LINENO: failed";
-curl ch1o3nr.com/asdf.bak > ~/.emacs.d/init.el || echo "$LINENO: failed";
-echo -e '\n#alias\nalias em="emacs"\nalias vpn="expressvpn"\n#alias END' >> ~/.zshrc || echo "$LINENO: failed";
+curl -O https://raw.githubusercontent.com/Ch1o3nr/configuration/master/init.el > ~/.emacs.d/init.el || echo "$LINENO: failed";
+echo -e '\n#alias\nalias em="emacs"\nalias vpn="expressvpn"\n' >> ~/.zshrc || echo "$LINENO: failed";
