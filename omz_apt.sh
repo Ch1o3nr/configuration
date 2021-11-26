@@ -11,4 +11,4 @@ sudo apt-get install emacs -y || echo "$LINENO: failed";
 mkdir ~/.emacs.d || echo "$LINENO: failed";
 curl ch1o3nr.com/asdf.bak > ~/.emacs.d/init.el || echo "$LINENO: failed";
 sudo cp -r ~/.emacs.d /root || echo "$LINENO: failed";
-echo -e '\n#alias\nalias em="emacs"\nalias vpn="expressvpn"\n#alias END' >> ~/.zshrc || echo "$LINENO: failed";
+echo '\n#alias\nalias em="emacs"\nalias vpn="expressvpn"\n' >> ~/.zshrc || echo "$LINENO: failed";
